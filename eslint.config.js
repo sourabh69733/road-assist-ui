@@ -1,7 +1,7 @@
-import globals from "globals"
-import pluginJs from "@eslint/js"
-import pluginReact from "eslint-plugin-react"
-import react from "eslint-plugin-react"
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import pluginReact from "eslint-plugin-react";
+import react from "eslint-plugin-react";
 
 export default [
   {
@@ -9,10 +9,10 @@ export default [
     plugins: {
       react,
     },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
+    settings: {
+      react: {
+        version: "detect",
+      },
     },
     languageOptions: {
       parserOptions: {
@@ -39,6 +39,16 @@ export default [
   {
     rules: {
       semi: ["error", "never"],
-    }
-  }
-]
+    },
+    "no-unused-vars": [
+      "error",
+      {
+        vars: "all",
+        args: "after-used",
+        caughtErrors: "all",
+        ignoreRestSiblings: false,
+        reportUsedIgnorePattern: false,
+      },
+    ],
+  },
+];
