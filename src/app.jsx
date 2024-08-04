@@ -1,7 +1,12 @@
-export default function () {
+import React from 'react'
+import Navbar from './navbar'
+
+const Home = () => {
     return (
-        <>
-            <h1>Hi, I am sourabh</h1>
-        </>
+        <div>
+            <Navbar />
+        </div>
     )
 }
+
+export default Home
