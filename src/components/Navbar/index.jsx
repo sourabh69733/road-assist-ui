@@ -23,7 +23,6 @@ const useStyles = makeStyles(() => ({
   appBar: {
     boxShadow: "none",
     backgroundColor: "#fff",
-    position: "absolute",
   },
   title: {
     flexGrow: 1,
@@ -120,7 +119,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar>
+      <AppBar position="relative" sx={{ boxShadow: 'none' }} >
         <Toolbar className={classes.appBar}>
           {isMobile ? (
             <>
