@@ -1,13 +1,13 @@
 import React from "react";
 import { Box } from "@mui/material";
 import Slideshow from "./SlideShow";
-import { styled } from "@mui/system";
 import ServiceForm from "./ServiceForm";
+import { styled } from "@mui/system";
 
 const Background = styled(Box)({
-  backgroundImage: "url(/assets/background.png)",
+  backgroundImage: "url(/assets/background2.png)",
   backgroundSize: "cover",
-  // backgroundPosition: "fit",
+  backgroundPosition: "fit",
   height: "90vh",
   display: "flex",
   alignItems: "center",

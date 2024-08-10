@@ -22,6 +22,8 @@ const ServiceForm = () => {
   const [open, setOpen] = useState(true);
   const [value, setValue] = useState(0);
 
+  const registrationRegex = "^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$"
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -35,24 +37,31 @@ const ServiceForm = () => {
   };
 
   const RequestForm = () => (
-    <Box gap={5} display={"grid"} borderRadius={5}>
+    <Box gap={5} display={"grid"} borderRadius={50} >
       <TextField
-        sx={{ backgroundColor: "#fff" }}
+        sx={{ backgroundColor: "#fff", boxShadow: '0px 0px 1px 0px', borderRadius: '10px' }}
+        InputProps={{ disableUnderline: true }}
         required
+        variant="filled"
+        color="primary"
         label="Service Location"
-        variant="outlined"
       />
       <TextField
-        sx={{ backgroundColor: "#fff" }}
+        sx={{ backgroundColor: "#fff", boxShadow: '0px 0px 1px 0px', borderRadius: '10px' }}
+        InputProps={{ disableUnderline: true }}
         required
+        variant="filled"
+        color="primary"
         label="Mobile Number"
-        variant="outlined"
       />
       <TextField
-        sx={{ backgroundColor: "#fff" }}
+        sx={{ backgroundColor: "#fff", boxShadow: '0px 0px 1px 0px', borderRadius: '10px' }}
+        InputProps={{ disableUnderline: true }}
         required
+        variant="filled"
+        color="primary"
         label="Vehicle Registration Number"
-        variant="outlined"
+        
       />
     </Box>
   );
@@ -61,11 +70,13 @@ const ServiceForm = () => {
     <div style={{ margin: "25%", zIndex: -1 }}>
       <Card
         sx={{
-          maxWidth: 1000,
+          top: "5%",
           position: "absolute",
           right: 4,
-          top: 100,
-          backgroundColor: "#F5F5F5",
+          backgroundColor: "#f68236",
+          boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;',
+          maxHeight: 600,
+          width: 400,
         }}
       >
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -92,7 +103,7 @@ const ServiceForm = () => {
             justifyContent: "center",
           }}
         >
-          <Button size="small" color="inherit">
+          <Button  fullWidth size="medium" color="inherit" sx={{ justifyContent: 'center' }}>
             {value == 0 ? "Speak to Us" : "Explore Plans"}
           </Button>
         </CardActions>

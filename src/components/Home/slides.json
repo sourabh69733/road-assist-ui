@@ -1,0 +1,17 @@
+[
+    {
+        "text": "Emergency Car Services Are Just a Call Away",
+        "description": "Vehicle emergencies can happen unexpectedly. RoadAssist Helpline understands this urgency and offers fast car services for emergencies by phone.",
+        "image": "/assets/slide1.jpg"
+    },
+    {
+        "text": "Another Slide Title",
+        "description": "Some other description for the second slide.",
+        "image": "/assets/slide1.jpg"
+    },
+    {
+        "text": "Third Slide Title",
+        "description": "Description for the third slide.",
+        "image": "/assets/slide1.jpg"
+    }
+]
