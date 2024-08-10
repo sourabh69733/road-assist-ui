@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import Slideshow from "./SlideShow";
 import ServiceForm from "./ServiceForm";
 import { styled } from "@mui/system";
+import Services from "./Services";
 
 const Background = styled(Box)({
   backgroundImage: "url(/assets/background2.png)",
@@ -19,10 +20,13 @@ const Background = styled(Box)({
 
 const Home = () => {
   return (
-    <Background>
-      <Slideshow />
-      <ServiceForm />
-    </Background>
+    <Box>
+      <Background>
+        <Slideshow />
+        <ServiceForm />
+      </Background>
+      <Services />
+    </Box>
   );
 };
 export default Home;
