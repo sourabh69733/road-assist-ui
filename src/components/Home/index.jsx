@@ -10,9 +10,9 @@ const Background = styled(Box)({
   backgroundPosition: "fit",
   height: "90vh",
   display: "flex",
-  alignItems: "center",
+  // alignItems: "center",
   justifyContent: "start",
-  position: "fixed",
+  position: "relative",
   left: 0,
   right: 0,
 });

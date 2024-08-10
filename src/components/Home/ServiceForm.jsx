@@ -67,11 +67,12 @@ const ServiceForm = () => {
   );
 
   return (
-    <div style={{ margin: "25%", zIndex: -1 }}>
+    <div style={{  }}>
       <Card
         sx={{
-          top: "5%",
-          position: "absolute",
+          marginLeft: '20px',
+          top: '10%',
+          position: "relative",
           right: 4,
           backgroundColor: "#f68236",
           boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;',

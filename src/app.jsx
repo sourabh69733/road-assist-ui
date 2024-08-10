@@ -6,26 +6,23 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Profile from "./components/Profile";
 import Services from "./components/Services";
+import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div style={{ backgroundColor: 'red' }}>
-        {/* <img src="/assets/background.jpg">
-        </img> */}
-        {/* <h1>
-            Hi
-        </h1> */}
       <Router>
+        <div style={{  }}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="about" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+      </div>
+      <Footer />
       </Router>
-    </div>
   );
 };
 

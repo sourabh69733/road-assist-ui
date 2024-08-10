@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Button, Container, Typography } from '@mui/material';
-import slides from './slides.json'
+import { Box, Container, Typography } from '@mui/material';
+import slides from '../../data/slides.json'
 
 const DashedLines = ({ currentSlide, setCurrentSlide }) => {
   const lineStyle = (isActive) => ({
@@ -24,7 +24,7 @@ const DashedLines = ({ currentSlide, setCurrentSlide }) => {
   };
 
   return (
-    <Box position={"fixed"} top="80%" left={"20%"} display="flex" alignItems="center">
+    <Box left={"20%"} display="flex" alignItems="center">
       {slides.map((_, index) => (
         <Box
           key={index}
@@ -41,13 +41,12 @@ const Slide = ({ text, description, image }) => {
   const imageheight = 450
   return (
     <Container>
-      <Box sx={{ maxWidth: '65%' }} display="flex" top={'5%'} position={'absolute'} flexDirection="row" alignItems="center" justifyContent="center" gap={2}>
-        <Box flex="1">
+      <Box display="flex"  flexDirection="row" alignItems="center" justifyContent="center" gap={2}>
+        <Box flex="1" >
           <Typography variant="h3" color="primary">{text}</Typography>
           <Typography variant="body1">{description}</Typography>
         </Box>
         <Box flex="1">
-        
           <img src={image} alt={text} style={{ maxWidth: '100%', width: `${imageheight * 1.78}px`, height: `${imageheight}px`, borderRadius: '8px' }} />
         </Box>
       </Box>
@@ -68,7 +67,7 @@ const Slideshow = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: '200px'}}>
+    <Box sx={{ maxWidth: '100%', top: '10%' }} position={"relative"}>
       <Slide {...slides[currentSlide]} />
       <DashedLines currentSlide={currentSlide} setCurrentSlide={setCurrentSlide}/>
     </Box>
