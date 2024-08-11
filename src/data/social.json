@@ -1,0 +1,22 @@
+[
+    {
+        "image": "facebook.svg",
+        "link": "https://facebook.com"
+    },
+    {
+        "image": "twitter.svg",
+        "link": "https://twitter.com"
+    },
+    {
+        "image": "instagram.svg",
+        "link": "https://instagram.com"
+    },
+    {
+        "image": "youtube.svg",
+        "link": "https://www.youtube.com/@RoadAssistcar24-7"
+    },
+    {
+        "image": "whatsapp.svg",
+        "link": "https://whatsapp.com"
+    }
+]
