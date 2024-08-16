@@ -7,8 +7,9 @@ const DashedLines = ({ currentSlide, setCurrentSlide }) => {
     height: '4px',
     width: '30px',
     backgroundColor: isActive ? '#1976d2' : '#ffffff', // Change active color here
-    marginRight: '8px',
+    // marginRight: '8px',
     borderRadius: '2px',
+    margin: '8px',
     cursor: 'pointer',
     transition: 'background-color 0.3s ease, transform 0.2s ease', // Smooth transition
     padding: '6px', // Increase the clickable area
@@ -24,7 +25,7 @@ const DashedLines = ({ currentSlide, setCurrentSlide }) => {
   };
 
   return (
-    <Box left={"20%"} display="flex" alignItems="center">
+    <Box display="flex" alignItems="center">
       {slides.map((_, index) => (
         <Box
           key={index}
@@ -57,7 +58,6 @@ const Slide = ({ text, description, image }) => {
 const Slideshow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -67,7 +67,7 @@ const Slideshow = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: '100%', top: '10%' }} position={"relative"}>
+    <Box sx={{ maxWidth: '100%', top: '10%', justifyContent: 'start' }} position={"relative"}>
       <Slide {...slides[currentSlide]} />
       <DashedLines currentSlide={currentSlide} setCurrentSlide={setCurrentSlide}/>
     </Box>

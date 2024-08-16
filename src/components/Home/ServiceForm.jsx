@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Tabs, Tab, TextField, CardActions } from "@mui/material";
+import { Box, Button, TextField, CardActions } from "@mui/material";
 import Card from "@mui/material/Card";
 
 function CustomTabPanel(props) {
@@ -67,29 +67,19 @@ const ServiceForm = () => {
   );
 
   return (
-    <div style={{  }}>
+    <div >
       <Card
         sx={{
           marginLeft: '20px',
           top: '10%',
           position: "relative",
           right: 4,
-          backgroundColor: "#f68236",
           boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;',
           maxHeight: 600,
           width: 400,
         }}
       >
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            sx={{ backgroundColor: "#fff", color: "#333333" }}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            <Tab label="Service Request" />
-            <Tab label="Become Member" />
-          </Tabs>
+        <Box justifyContent={"center"} margin={"10px"} display={'flex'} gap={3}>
         </Box>
         <CustomTabPanel value={value} index={0}>
           <RequestForm />
@@ -99,14 +89,21 @@ const ServiceForm = () => {
         </CustomTabPanel>
         <CardActions
           sx={{
-            backgroundColor: "#fff",
-            color: "#007BFF",
             justifyContent: "center",
+            margin: '10px',
+            gap: '10px'
           }}
         >
-          <Button  fullWidth size="medium" color="inherit" sx={{ justifyContent: 'center' }}>
-            {value == 0 ? "Speak to Us" : "Explore Plans"}
+          <Box >
+          <Button color="success"  onClick={() => setValue(0)} variant="contained">
+          Request a Service
           </Button>
+          </Box>
+          <Box>
+          <Button color="success" onClick={() => setValue(1)} variant="contained">
+          Become a Member
+          </Button>
+          </Box>
         </CardActions>
       </Card>
     </div>
