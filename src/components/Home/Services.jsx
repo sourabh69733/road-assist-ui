@@ -4,33 +4,22 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia'; // For potential images
+import { Link } from 'react-router-dom';
+import servicesData from '../../data/services.json'
 
 const OurServices = () => {
-  const services = [
-    {
-      title: 'Tyre Puncture',
-      description: 'Flat tires can really put a damper on your day, but don\'t worry-we\'re here to help. Our speedy tire puncture service has got you covered.',
-      icon: 'local_gas_station' // Replace with actual icon
-    },
-    {
-      title: 'Fuel Delivery',
-      description: 'Whether you\'re running low on fuel or stuck, don\'t stress! Our on-site car refueling service is here to save the day.',
-      icon: 'directions_car' // Replace with actual icon
-    },
-    // ... other services
-  ];
-
   return (
-    <Box sx={{ textAlign: 'center', padding: 2 }}>
-      <Typography variant="h4" component="h2" gutterBottom>
+    <Box sx={{ textAlign: 'center' }}>
+      <Box display={"block"} marginBottom={3}>
+      <Typography variant="h3" component="h2" gutterBottom color={"#ff6600"}>
         Our Services
       </Typography>
-      <Typography variant="body1" color="textSecondary" component="p">
+      <Typography variant="h6" color="textSecondary">
         Delivering top-notch services tailored to your needs. Trust us for reliable, high-quality assistance whenever you need it.
       </Typography>
+      </Box>
       <Grid container spacing={2} justifyContent="center" alignItems="center">
-        {services.map((service) => (
+        {servicesData.map((service) => (
           <Grid item xs={12} sm={6} md={4} key={service.title}>
             <Card sx={{
                 '&:hover': {
@@ -38,7 +27,7 @@ const OurServices = () => {
                 }
             }}>
               <CardContent>
-                {/* Replace with actual icon component */}
+                <Link to={`${service.path}`} style={{ textDecoration: "none", color: "inherit" }}>
                 <i className="material-icons">{service.icon}</i>
                 <Typography variant="h5" component="h2" gutterBottom>
                   {service.title}
@@ -46,6 +35,8 @@ const OurServices = () => {
                 <Typography variant="body2" color="textSecondary" component="p">
                   {service.description}
                 </Typography>
+                </Link>
+                
               </CardContent>
             </Card>
           </Grid>

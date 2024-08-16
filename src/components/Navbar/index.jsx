@@ -18,6 +18,7 @@ import { Drawer, List, ListItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import servicesData from '../../data/services.json'
 
 const useStyles = makeStyles(() => ({
   appBar: {
@@ -51,14 +52,6 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const SERVICES = [
-  "Tyre Puncture",
-  "Fuel Delivery",
-  "Towing",
-  "Key Lockout",
-  "Battery Jump Start",
-  "Instant Car Repair",
-];
 
 const Navbar = () => {
   const classes = useStyles();
@@ -180,13 +173,13 @@ const Navbar = () => {
                 open={Boolean(anchorElServices)}
                 onClose={handleClose}
               >
-                {SERVICES.map((service, index) => (
-                  <Link key={index} to={`/${service}`} className={classes.link}>
+                {servicesData.map((service, index) => (
+                  <Link key={index} to={`/${service.path}`} className={classes.link}>
                     <MenuItem onClick={handleClose}>
                       <ListItemIcon>
                         <HomeOutlinedIcon className={classes.menuButton} />
                       </ListItemIcon>
-                      <ListItemText primary={service} />
+                      <ListItemText primary={service.title} />
                     </MenuItem>
                   </Link>
                 ))}
