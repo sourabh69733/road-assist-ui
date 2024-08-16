@@ -1,17 +1,17 @@
 [
     {
-        "text": "Emergency Car Services Are Just a Call Away",
-        "description": "Vehicle emergencies can happen unexpectedly. RoadAssist Helpline understands this urgency and offers fast car services for emergencies by phone.",
-        "image": "/assets/slide1.jpg"
+        "text": "Your Trusted Roadside Support Provider",
+        "description": "Welcome to Road Assist, your trusted partner for efficient roadside assistance services in Jaipur. Count on our reliable solutions to quickly resolve your vehicle breakdowns and keep you moving forward.",
+        "image": "https://roadassistservices.com/wp-content/uploads/2023/08/battery.png"
     },
     {
         "text": "Another Slide Title",
         "description": "Some other description for the second slide.",
-        "image": "/assets/slide1.jpg"
+        "image": "https://roadassistservices.com/wp-content/uploads/2023/08/flat-tyre.png"
     },
     {
         "text": "Third Slide Title",
         "description": "Description for the third slide.",
-        "image": "/assets/slide1.jpg"
+        "image": "https://roadassistservices.com/wp-content/uploads/2023/08/towing.png"
     }
 ]

@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What services are included in your roadside assistance package?",
+        "answer": "Our packages include emergency towing, jump starts, tire puncture, fuel delivery, key lockout services, instant car repair, and more."
+    },
+    {
+        "question": "Are your services available 24/7?",
+        "answer": "Yes, our services are available 24/7 to ensure you're never left stranded."
+    },
+    {
+        "question": "Do I need to pay any additional fees when I call for assistance?",
+        "answer": "No, all services are covered under your package without any additional fees."
+    },
+    {
+        "question": "How quickly will you respond to my emergency call?",
+        "answer": "We strive to respond to all emergency calls within 30 minutes."
+    },
+    {
+        "question": "What if I need assistance outside of your coverage area?",
+        "answer": "If you're outside our coverage area, we will do our best to connect you with a local service provider."
+    }
+]
