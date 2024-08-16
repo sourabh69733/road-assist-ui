@@ -2,8 +2,9 @@ import React from 'react';
 import { Container, Grid, Typography, Box, TextField, Button, Paper, Stack, MenuItem } from '@mui/material';
 import { Phone, Email, Language, LocationOn } from '@mui/icons-material'
 import states from '../../data/states.json'
+import FAQ from '../common/FAQ'
 
-const ContactUs = () => {
+const ContactForm = () => {
   return (
     <Box sx={{ bgcolor: '#f8f9fa', py: 8 }}>
       <Container>
@@ -83,6 +84,15 @@ const ContactUs = () => {
       </Container>
     </Box>
   );
+}
+
+const ContactUs = () => {
+  return (
+    <Box>
+      <ContactForm />
+      <FAQ />
+    </Box>
+  )
 };
 
 export default ContactUs;
