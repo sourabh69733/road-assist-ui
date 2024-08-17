@@ -5,6 +5,7 @@ import ServiceForm from "./ServiceForm";
 import { styled } from "@mui/system";
 import Services from "./Services";
 import FAQ from '../common/FAQ'
+import Satisfication from './Satisfication'
 
 const Background = styled(Box)({
   backgroundImage: "url(/assets/background2.png)",
@@ -26,11 +27,14 @@ const Home = () => {
         <Slideshow />
         <ServiceForm />
       </Background>
-      <Box sx={{marginTop: '5px', backgroundColor: '#f5f3f3'}}>
-      <Services />
+      <Box>
+        <Satisfication />
       </Box>
-      
-        <FAQ />
+      <Box sx={{ marginTop: '5px', marginBottom: '20px', backgroundColor: '#f5f3f3' }}>
+        <Services />
+      </Box>
+
+      <FAQ />
     </Box>
   );
 };

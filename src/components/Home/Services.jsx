@@ -7,6 +7,10 @@ import CardContent from '@mui/material/CardContent';
 import { Link } from 'react-router-dom';
 import servicesData from '../../data/services.json'
 
+/**
+ * Services icons source ref: https://www.flaticon.com/free-icon/tow-truck_8940300?term=towing&page=1&position=17&origin=search&related_id=8940300
+ * @returns 
+ */
 const OurServices = () => {
   return (
     <Box sx={{ textAlign: 'center' }}>
@@ -28,7 +32,7 @@ const OurServices = () => {
             }}>
               <CardContent>
                 <Link to={`${service.path}`} style={{ textDecoration: "none", color: "inherit" }}>
-                <i className="material-icons">{service.icon}</i>
+                <img src={service.icon} width={"40%"}></img>
                 <Typography variant="h5" component="h2" gutterBottom>
                   {service.title}
                 </Typography>

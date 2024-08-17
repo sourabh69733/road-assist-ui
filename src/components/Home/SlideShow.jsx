@@ -25,7 +25,7 @@ const DashedLines = ({ currentSlide, setCurrentSlide }) => {
   };
 
   return (
-    <Box display="flex" alignItems="center">
+    <Box display="flex" >
       {slides.map((_, index) => (
         <Box
           key={index}
@@ -42,7 +42,7 @@ const Slide = ({ text, description, image }) => {
   const imageheight = 450
   return (
     <Container>
-      <Box display="flex"  flexDirection="row" alignItems="center" justifyContent="center" gap={2}>
+      <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center" >
         <Box flex="1" >
           <Typography variant="h3" color="primary">{text}</Typography>
           <Typography variant="body1">{description}</Typography>
@@ -67,7 +67,7 @@ const Slideshow = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: '100%', top: '10%', justifyContent: 'start' }} position={"relative"}>
+    <Box sx={{ maxWidth: '100%', top: '10%', justifyItems: "flex-start", paddingLeft: '10px' }} position={"relative"}>
       <Slide {...slides[currentSlide]} />
       <DashedLines currentSlide={currentSlide} setCurrentSlide={setCurrentSlide}/>
     </Box>
