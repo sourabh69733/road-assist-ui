@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 
 const BatteryJumpstartService = () => {
     return (
-        <Container maxWidth="100%" sx={{ marginBottom: '10px' }} >
+        <Container maxWidth="100%" sx={{ marginBottom: '20px' }} >
             {/* Image with Title Overlay */}
             <Box
                 sx={{
                     position: 'relative',
                     height: '300px',
-                    backgroundImage: 'url(assets/battery.jpg)', // Replace with your image path
+                    backgroundImage: 'url(assets/jump_start1.jpg)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     borderRadius: '8px',
@@ -22,7 +22,7 @@ const BatteryJumpstartService = () => {
                     sx={{
                         position: 'absolute',
                         inset: 0,
-                        backgroundColor: 'rgba(255, 255, 255, 0.6)', // Black overlay
+                        backgroundColor: 'rgba(0, 0, 0, 0.6)',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
@@ -31,7 +31,7 @@ const BatteryJumpstartService = () => {
                     <Typography
                         variant="h3"
                         component="h1"
-                        color="#000"
+                        color="#fff"
                         textAlign="center"
                         sx={{
                             padding: '0 20px',

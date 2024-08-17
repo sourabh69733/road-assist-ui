@@ -2,37 +2,37 @@
     {
         "title": "Battery Jumpstart",
         "description": "Don't let a dead battery ruin your day. Our reliable battery jumpstart service gets you back on the road in no time, ensuring you're never stranded for long.",
-        "icon": "local_gas_station",
+        "icon": "assets/jump-start-2.png",
         "path": "battery-jump-start"
     },
     {
         "title": "Mechanical Fault",
         "description": "Experiencing a mechanical fault? Our expert technicians are just a call away, ready to diagnose and fix the issue so you can drive with confidence.",
-        "icon": "directions_car",
+        "icon": "assets/mechanic-fault.png",
         "path": "instant-car-repair"
     },
     {
         "title": "Flat Tyre",
         "description": "A flat tire can be a major inconvenience, but our swift flat tire services ensure you're back on the road quickly and safely.",
-        "icon": "directions_car",
+        "icon": "assets/car.png",
         "path": "tyre-puncture"
     },
     {
         "title": "Fuel Filling",
         "description": "Running out of fuel far from a station? Our on-demand fuel delivery service is here to fill up your tank and get you moving again.",
-        "icon": "local_gas_station",
+        "icon": "assets/fuel-filling.png",
         "path": "fuel-delivery"
     },
     {
         "title": "Key Lockout",
         "description": "Locked out of your vehicle? Our professional lockout service helps you regain access without hassle, getting you back behind the wheel in no time.",
-        "icon": "directions_car",
+        "icon": "assets/key-lockout.png",
         "path": "key-lockout"
     },
     {
         "title": "Car & Bike Towing",
         "description": "Whether it's a car or bike breakdown, our efficient towing services ensure your vehicle is safely transported to your preferred destination.",
-        "icon": "directions_car",
+        "icon": "assets/towing.png",
         "path": "towing"
     }
 ]
