@@ -48,7 +48,7 @@ const Slide = ({ text, description, image }) => {
           <Typography variant="body1">{description}</Typography>
         </Box>
         <Box flex="1">
-          <img src={image} alt={text} style={{ maxWidth: '100%', width: `${imageheight * 1.78}px`, height: `${imageheight}px`, borderRadius: '8px' }} />
+          <img src={`/assets/images/${image}`} alt={text} style={{ maxWidth: '100%', width: `${imageheight * 1.78}px`, height: `${imageheight}px`, borderRadius: '8px' }} />
         </Box>
       </Box>
     </Container>

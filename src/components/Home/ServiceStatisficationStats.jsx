@@ -5,7 +5,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
-const SatisfactionGuaranteed = () => {
+const ServiceStatisficationStats = () => {
   const stats = [
     { icon: <ThumbUpIcon fontSize="large" />, value: '2500+', label: 'Car Emergency Service Provided' },
     { icon: <PersonIcon fontSize="large" />, value: '95%', label: 'Customer Satisfaction' },
@@ -43,4 +43,4 @@ const SatisfactionGuaranteed = () => {
   );
 };
 
-export default SatisfactionGuaranteed;
+export default ServiceStatisficationStats;

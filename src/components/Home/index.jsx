@@ -5,7 +5,7 @@ import ServiceForm from "./ServiceForm";
 import { styled } from "@mui/system";
 import Services from "./Services";
 import FAQ from '../common/FAQ'
-import Satisfication from './Satisfication'
+import ServiceStatisficationStats from './ServiceStatisficationStats'
 
 const Background = styled(Box)({
   backgroundImage: "url(/assets/images/background2.png)",
@@ -13,7 +13,6 @@ const Background = styled(Box)({
   backgroundPosition: "fit",
   height: "90vh",
   display: "flex",
-  // alignItems: "center",
   justifyContent: "start",
   position: "relative",
   left: 0,
@@ -28,7 +27,7 @@ const Home = () => {
         <ServiceForm />
       </Background>
       <Box>
-        <Satisfication />
+        <ServiceStatisficationStats />
       </Box>
       <Box sx={{ marginTop: '5px', marginBottom: '20px', backgroundColor: '#f5f3f3' }}>
         <Services />

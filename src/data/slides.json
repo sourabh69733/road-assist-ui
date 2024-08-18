@@ -2,16 +2,16 @@
     {
         "text": "Your Trusted Roadside Support Provider",
         "description": "Welcome to Road Assist, your trusted partner for efficient roadside assistance services in Jaipur. Count on our reliable solutions to quickly resolve your vehicle breakdowns and keep you moving forward.",
-        "image": "https://roadassistservices.com/wp-content/uploads/2023/08/battery.png"
+        "image": "battery-jump-start-slide.jpg"
     },
     {
         "text": "Another Slide Title",
         "description": "Some other description for the second slide.",
-        "image": "https://roadassistservices.com/wp-content/uploads/2023/08/flat-tyre.png"
+        "image": "flat-tyre-slide.jpg"
     },
     {
         "text": "Third Slide Title",
         "description": "Description for the third slide.",
-        "image": "https://roadassistservices.com/wp-content/uploads/2023/08/towing.png"
+        "image": "car-towing-slide.jpg"
     }
 ]
