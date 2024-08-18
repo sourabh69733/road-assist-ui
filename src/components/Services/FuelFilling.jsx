@@ -10,7 +10,7 @@ const FuelFillingService = () => {
         sx={{
           position: 'relative',
           height: '400px',
-          backgroundImage: 'url(assets/fuel-filling.jpg)', // Replace with your image path
+          backgroundImage: 'url(/assets/images/fuel-filling.jpg)', // Replace with your image path
           backgroundSize: 'cover',
           backgroundPosition: '0 50%',
           borderRadius: '8px',

@@ -10,7 +10,7 @@ const FlatTyreService = () => {
         sx={{
           position: 'relative',
           height: '400px',
-          backgroundImage: 'url(assets/flat-tyre-3.jpg)', // Replace with your image path
+          backgroundImage: 'url(/assets/images/flat-tyre-3.jpg)', // Replace with your image path
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
           borderRadius: '8px',

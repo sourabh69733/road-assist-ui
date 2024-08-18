@@ -98,7 +98,7 @@ const Footer = () => {
         <Grid container spacing={8}>
           {/* Image Column */}
           <Grid item xs={6} md={3}>
-            <img src="/assets/road-assit-logo.png" width={"100%"} />
+            <img src="/assets/logo/road-assit.png" width={"100%"} />
             <Typography variant="body2" align="left">
               At Road Assist, we are dedicated to providing exceptional roadside
               assistance services in Jaipur, Rajasthan
@@ -108,7 +108,7 @@ const Footer = () => {
                 return (
                   <div key={"social-icon-" + index}>
                     <a href={iconObj.link} target="_blank">
-                      <img src={`/assets/${iconObj.image}`}></img>
+                      <img src={`/assets/icons/${iconObj.image}`}></img>
                     </a>
                   </div>
                 );

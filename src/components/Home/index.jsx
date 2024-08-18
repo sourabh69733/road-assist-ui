@@ -8,7 +8,7 @@ import FAQ from '../common/FAQ'
 import Satisfication from './Satisfication'
 
 const Background = styled(Box)({
-  backgroundImage: "url(/assets/background2.png)",
+  backgroundImage: "url(/assets/images/background2.png)",
   backgroundSize: "cover",
   backgroundPosition: "fit",
   height: "90vh",

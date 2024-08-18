@@ -10,7 +10,7 @@ const BatteryJumpstartService = () => {
                 sx={{
                     position: 'relative',
                     height: '300px',
-                    backgroundImage: 'url(assets/jump_start1.jpg)',
+                    backgroundImage: 'url(/assets/images/jump_start1.jpg)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     borderRadius: '8px',

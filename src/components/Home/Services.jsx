@@ -32,7 +32,7 @@ const OurServices = () => {
             }}>
               <CardContent>
                 <Link to={`${service.path}`} style={{ textDecoration: "none", color: "inherit" }}>
-                <img src={service.icon} width={"40%"}></img>
+                <img src={`/assets/icons/${service.icon}`} width={"40%"}></img>
                 <Typography variant="h5" component="h2" gutterBottom>
                   {service.title}
                 </Typography>

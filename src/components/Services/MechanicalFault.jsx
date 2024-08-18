@@ -10,7 +10,7 @@ const MechanicalFaultService = () => {
         sx={{
           position: 'relative',
           height: '400px',
-          backgroundImage: 'url(assets/auto-repair.jpg)', // Replace with your image path
+          backgroundImage: 'url(/assets/images/auto-repair.jpg)', // Replace with your image path
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           borderRadius: '8px',

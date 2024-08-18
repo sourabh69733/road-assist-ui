@@ -10,7 +10,7 @@ const KeyLockoutService = () => {
         sx={{
           position: 'relative',
           height: '400px',
-          backgroundImage: 'url(assets/key-lockout-4.jpg)', // Replace with your image path
+          backgroundImage: 'url(/assets/images/key-lockout-4.jpg)', // Replace with your image path
           backgroundSize: 'cover',
           backgroundPosition: '0 70%',
           borderRadius: '8px',

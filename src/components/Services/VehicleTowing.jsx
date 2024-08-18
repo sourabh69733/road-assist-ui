@@ -10,7 +10,7 @@ const VehicleTowingService = () => {
         sx={{
           position: 'relative',
           height: '400px',
-          backgroundImage: 'url(assets/vehicle-towing.jpg)', // Replace with your image path
+          backgroundImage: 'url(/assets/images/vehicle-towing.jpg)', // Replace with your image path
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           borderRadius: '8px',
