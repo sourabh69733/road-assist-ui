@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Box, Button, TextField, CardActions } from "@mui/material";
+import { Box, Button, TextField, CardActions, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
+import { useNavigate } from 'react-router-dom'
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -21,6 +22,7 @@ function CustomTabPanel(props) {
 const ServiceForm = () => {
   const [open, setOpen] = useState(true);
   const [value, setValue] = useState(0);
+  const history = useNavigate()
 
   const registrationRegex = "^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$"
 
@@ -94,17 +96,25 @@ const ServiceForm = () => {
             gap: '10px'
           }}
         >
-          <Box >
+          {/* <Box >
           <Button color="success"  onClick={() => setValue(0)} variant="contained">
-          Request a Service
+          Request a S1234567890ervice
           </Button>
-          </Box>
+          </Box> */}
           <Box>
-          <Button color="success" onClick={() => setValue(1)} variant="contained">
+          <Button color="success" onClick={() => history('/plans')} variant="contained">
           Become a Member
           </Button>
           </Box>
         </CardActions>
+        <Box textAlign={'center'} marginBottom={'20px'}>
+          <Typography fontWeight={'bold'}>
+            Call us for support
+          </Typography>
+          <Typography fontWeight={''}>
+            +91 1234567890
+          </Typography>
+        </Box>
       </Card>
     </div>
   );

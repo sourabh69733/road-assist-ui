@@ -13,17 +13,28 @@ import {
   FormControl,
   Box,
 } from "@mui/material";
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { pricingOptions } from '../../data/plans.json'
 
 export default function CheckoutPage() {
   const { search } = useLocation()
+  const history = useNavigate()
 
   const query = new URLSearchParams(search);
 
-  const planId = query.get('planId') || 'gold-plan'
+  const planId = query.get('planId')
 
-  console.log('planId', query, search,  planId)
+  console.log('planId', planId)
+
+  React.useEffect(() => {
+    if (!planId) {
+      console.log('Please choose first plan')
+      history('/plans')
+      return 
+    }
+  }, [])
+  
+  if (!planId) return null
 
   const plan = pricingOptions.find((item) => item.id == planId)
 

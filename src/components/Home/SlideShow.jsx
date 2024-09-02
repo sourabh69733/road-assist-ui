@@ -38,11 +38,11 @@ const DashedLines = ({ currentSlide, setCurrentSlide }) => {
 
 // width / height = 1.78
 const Slide = ({ text, description, image }) => {
-  const imageheight = 450
+  const imageheight = 350
   return (
     <Container>
       <Box display="flex" flexDirection="row" alignItems="center" justifyContent="center" >
-        <Box flex="1" >
+        <Box flex="1" maxWidth={"100%"} >
           <Typography variant="h3" color="primary">{text}</Typography>
           <Typography variant="body1">{description}</Typography>
         </Box>
