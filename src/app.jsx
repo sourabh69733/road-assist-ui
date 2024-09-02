@@ -14,11 +14,12 @@ import {
   VehicleTowingService,
 } from "./components/Services";
 import Footer from './components/Footer'
+import Plans from './components/Plans'
+import Checkout from './components/Checkout'
 
 const App = () => {
   return (
-    <Router>
-      <div style={{}}>
+<Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,11 +31,13 @@ const App = () => {
           <Route path="/towing" element={<VehicleTowingService />} />
           <Route path="/about" element={<About />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/plans" element={<Plans />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
-      </div>
       <Footer />
     </Router>
+    
   );
 };
 
