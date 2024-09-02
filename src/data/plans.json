@@ -1,0 +1,159 @@
+{
+    "pricingOptions": [
+        {
+            "title": "Gold",
+            "id": "gold-plan",
+            "price": 1999,
+            "duration": 1,
+            "vehiclesCovered": 1,
+            "services": 4,
+            "cardColor": "#FFD700"
+        },
+        {
+            "title": "Platinum",
+            "id": "platinum-plan",
+            "price": 2999,
+            "duration": 2,
+            "vehiclesCovered": 1,
+            "services": 10,
+            "cardColor": "#C0C0C0"
+        },
+        {
+            "title": "Titanium",
+            "id": "titanium-plan",
+            "price": 4719,
+            "duration": 4,
+            "vehiclesCovered": 1,
+            "services": 15,
+            "cardColor": "#0C090A"
+        }
+    ],
+    "planDetails": {
+        "gold-plan": [
+            {
+                "feature": "Price",
+                "detail": "₹ 1999"
+            },
+            {
+                "feature": "Towing",
+                "detail": "As per market price"
+            },
+            {
+                "feature": "Key Lockout",
+                "detail": "Assistance (Free)"
+            },
+            {
+                "feature": "Delivery Time",
+                "detail": "30-45 mins"
+            },
+            {
+                "feature": "Instant Repair",
+                "detail": "Assistance (Free)"
+            },
+            {
+                "feature": "Membership Transfer",
+                "detail": "No Transfer"
+            },
+            {
+                "feature": "Battery Jump Start (Dead/Weak)",
+                "detail": "Free"
+            },
+            {
+                "feature": "Fuel Delivery (Petrol or Diesel)",
+                "detail": "Maximum 5 ltr (As per market price)"
+            },
+            {
+                "feature": "Tyre Puncture (if stepney change)",
+                "detail": "Free"
+            },
+            {
+                "feature": "Tyre Puncture (if punctured repair)",
+                "detail": "As per market price"
+            }
+        ],
+        "platinum-plan": [
+            {
+                "feature": "Price",
+                "detail": "₹ 1999"
+            },
+            {
+                "feature": "Towing",
+                "detail": "As per market price"
+            },
+            {
+                "feature": "Key Lockout",
+                "detail": "Assistance (Free)"
+            },
+            {
+                "feature": "Delivery Time",
+                "detail": "30-45 mins"
+            },
+            {
+                "feature": "Instant Repair",
+                "detail": "Assistance (Free)"
+            },
+            {
+                "feature": "Membership Transfer",
+                "detail": "No Transfer"
+            },
+            {
+                "feature": "Battery Jump Start (Dead/Weak)",
+                "detail": "Free"
+            },
+            {
+                "feature": "Fuel Delivery (Petrol or Diesel)",
+                "detail": "Maximum 5 ltr (As per market price)"
+            },
+            {
+                "feature": "Tyre Puncture (if stepney change)",
+                "detail": "Free"
+            },
+            {
+                "feature": "Tyre Puncture (if punctured repair)",
+                "detail": "As per market price"
+            }
+        ],
+        "titanium-plan": [
+            {
+                "feature": "Price",
+                "detail": "₹ 1999"
+            },
+            {
+                "feature": "Towing",
+                "detail": "As per market price"
+            },
+            {
+                "feature": "Key Lockout",
+                "detail": "Assistance (Free)"
+            },
+            {
+                "feature": "Delivery Time",
+                "detail": "30-45 mins"
+            },
+            {
+                "feature": "Instant Repair",
+                "detail": "Assistance (Free)"
+            },
+            {
+                "feature": "Membership Transfer",
+                "detail": "No Transfer"
+            },
+            {
+                "feature": "Battery Jump Start (Dead/Weak)",
+                "detail": "Free"
+            },
+            {
+                "feature": "Fuel Delivery (Petrol or Diesel)",
+                "detail": "Maximum 5 ltr (As per market price)"
+            },
+            {
+                "feature": "Tyre Puncture (if stepney change)",
+                "detail": "Free"
+            },
+            {
+                "feature": "Tyre Puncture (if punctured repair)",
+                "detail": "As per market price"
+            }
+        ]
+    }
+}
