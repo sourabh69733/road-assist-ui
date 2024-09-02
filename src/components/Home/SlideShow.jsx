@@ -7,7 +7,6 @@ const DashedLines = ({ currentSlide, setCurrentSlide }) => {
     height: '4px',
     width: '30px',
     backgroundColor: isActive ? '#1976d2' : '#ffffff', // Change active color here
-    // marginRight: '8px',
     borderRadius: '2px',
     margin: '8px',
     cursor: 'pointer',
