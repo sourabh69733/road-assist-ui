@@ -19,6 +19,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import servicesData from '../../data/services.json'
+import Box from '@mui/material/Box'
 
 const useStyles = makeStyles(() => ({
   appBar: {
@@ -52,6 +53,12 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+
+const PlanIcon = () => {
+  return (
+    <img width={"24px"} height={"24px"} src="assets/icons/plans_icon.png" />
+  )
+}
 
 const Navbar = () => {
   const classes = useStyles();
@@ -141,13 +148,15 @@ const Navbar = () => {
               >
                 <Link to="/" className={classes.link}>
                   <img
-                    src="/assets/road-assit-logo.png"
+                    src="/assets/logo/road-assit.png"
                     alt="Logo"
                     className={classes.logo}
                   />
                   ROADASSIST
                 </Link>
               </Typography>
+              
+              <Box display={"flex"} gap={3}>
               <Link to="/" className={classes.link}>
                 <Button
                   className={classes.button}
@@ -186,7 +195,7 @@ const Navbar = () => {
               </Menu>
 
               <Link to="/plans" className={classes.link}>
-                <Button className={classes.button} startIcon={<BuildIcon />}>
+                <Button className={classes.button} startIcon={<PlanIcon />}>
                   <Typography component="div" className={classes.button}>
                     Plans
                   </Typography>
@@ -199,8 +208,9 @@ const Navbar = () => {
                   </Typography>
                 </Button>
               </Link>
+              </Box>
 
-              <Link to="/about" className={classes.link}>
+              {/* <Link to="/about" className={classes.link}>
                 <Button
                   className={classes.button}
                   startIcon={<InfoOutlinedIcon />}
@@ -209,7 +219,7 @@ const Navbar = () => {
                     About
                   </Typography>
                 </Button>
-              </Link>
+              </Link> */}
             </>
           )}
         </Toolbar>
