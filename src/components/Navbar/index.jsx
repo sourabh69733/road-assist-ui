@@ -18,8 +18,9 @@ import { Drawer, List, ListItem } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import servicesData from '../../data/services.json'
-import Box from '@mui/material/Box'
+import servicesData from "../../data/services.json";
+import Box from "@mui/material/Box";
+import Login from "./Login";
 
 const useStyles = makeStyles(() => ({
   appBar: {
@@ -53,12 +54,19 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const LoginIcon = () => {
+  return (
+    <>
+      <img src="/assets/icons/user-login.png" width={"24px"} height={"24px"} />
+    </>
+  );
+};
 
 const PlanIcon = () => {
   return (
     <img width={"24px"} height={"24px"} src="assets/icons/plans_icon.png" />
-  )
-}
+  );
+};
 
 const Navbar = () => {
   const classes = useStyles();
@@ -67,6 +75,7 @@ const Navbar = () => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const [isLoginOpen, setIsLoginOpen] = React.useState(false);
 
   const handleServicesMenu = (event) => {
     setAnchorElServices(event.currentTarget);
@@ -89,28 +98,13 @@ const Navbar = () => {
         <ListItem onClick={handleServicesMenu}>
           <ListItemText primary="Services" />
         </ListItem>
-        <ListItem
-        
-          component={Link}
-          to="/plans"
-          onClick={toggleDrawer(false)}
-        >
+        <ListItem component={Link} to="/plans" onClick={toggleDrawer(false)}>
           <ListItemText primary="Plans" />
         </ListItem>
-        <ListItem
-        
-          component={Link}
-          to="/contact"
-          onClick={toggleDrawer(false)}
-        >
+        <ListItem component={Link} to="/contact" onClick={toggleDrawer(false)}>
           <ListItemText primary="Contact" />
         </ListItem>
-        <ListItem
-        
-          component={Link}
-          to="/about"
-          onClick={toggleDrawer(false)}
-        >
+        <ListItem component={Link} to="/about" onClick={toggleDrawer(false)}>
           <ListItemText primary="About" />
         </ListItem>
       </List>
@@ -119,7 +113,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="relative" sx={{ boxShadow: 'none' }} >
+      <AppBar position="relative" sx={{ boxShadow: "none" }}>
         <Toolbar className={classes.appBar}>
           {isMobile ? (
             <>
@@ -155,74 +149,77 @@ const Navbar = () => {
                   ROADASSIST
                 </Link>
               </Typography>
-              
+
               <Box display={"flex"} gap={3}>
-              <Link to="/" className={classes.link}>
+                <Link to="/" className={classes.link}>
+                  <Button
+                    className={classes.button}
+                    startIcon={<HomeOutlinedIcon />}
+                  >
+                    <Typography component="div" className={classes.button}>
+                      Home
+                    </Typography>
+                  </Button>
+                </Link>
+
                 <Button
                   className={classes.button}
-                  startIcon={<HomeOutlinedIcon />}
+                  startIcon={<BuildIcon />}
+                  onClick={handleServicesMenu}
                 >
                   <Typography component="div" className={classes.button}>
-                    Home
+                    Services
                   </Typography>
                 </Button>
-              </Link>
+                <Menu
+                  anchorEl={anchorElServices}
+                  open={Boolean(anchorElServices)}
+                  onClose={handleClose}
+                >
+                  {servicesData.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={`/${service.path}`}
+                      className={classes.link}
+                    >
+                      <MenuItem onClick={handleClose}>
+                        <ListItemIcon>
+                          <HomeOutlinedIcon className={classes.menuButton} />
+                        </ListItemIcon>
+                        <ListItemText primary={service.title} />
+                      </MenuItem>
+                    </Link>
+                  ))}
+                </Menu>
 
-              <Button
-                className={classes.button}
-                startIcon={<BuildIcon />}
-                onClick={handleServicesMenu}
-              >
-                <Typography component="div" className={classes.button}>
-                  Services
-                </Typography>
-              </Button>
-              <Menu
-                anchorEl={anchorElServices}
-                open={Boolean(anchorElServices)}
-                onClose={handleClose}
-              >
-                {servicesData.map((service, index) => (
-                  <Link key={index} to={`/${service.path}`} className={classes.link}>
-                    <MenuItem onClick={handleClose}>
-                      <ListItemIcon>
-                        <HomeOutlinedIcon className={classes.menuButton} />
-                      </ListItemIcon>
-                      <ListItemText primary={service.title} />
-                    </MenuItem>
-                  </Link>
-                ))}
-              </Menu>
-
-              <Link to="/plans" className={classes.link}>
-                <Button className={classes.button} startIcon={<PlanIcon />}>
-                  <Typography component="div" className={classes.button}>
-                    Plans
-                  </Typography>
-                </Button>
-              </Link>
-              <Link to="/contact" className={classes.link}>
-                <Button className={classes.button} startIcon={<PhoneIcon />}>
-                  <Typography component="div" className={classes.button}>
-                    Contact
-                  </Typography>
-                </Button>
-              </Link>
+                <Link to="/plans" className={classes.link}>
+                  <Button className={classes.button} startIcon={<PlanIcon />}>
+                    <Typography component="div" className={classes.button}>
+                      Plans
+                    </Typography>
+                  </Button>
+                </Link>
+                <Link to="/contact" className={classes.link}>
+                  <Button className={classes.button} startIcon={<PhoneIcon />}>
+                    <Typography component="div" className={classes.button}>
+                      Contact
+                    </Typography>
+                  </Button>
+                </Link>
               </Box>
-
-              {/* <Link to="/about" className={classes.link}>
+              <Box marginLeft={"20px"} marginRight={"10px"}>
                 <Button
-                  className={classes.button}
-                  startIcon={<InfoOutlinedIcon />}
+                  variant="contained"
+                  startIcon={<LoginIcon />}
+                  onClick={() => setIsLoginOpen(!isLoginOpen)}
                 >
-                  <Typography component="div" className={classes.button}>
-                    About
-                  </Typography>
+                  Login
                 </Button>
-              </Link> */}
+              </Box>
             </>
           )}
         </Toolbar>
+        <Login open={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
       </AppBar>
     </>
   );
